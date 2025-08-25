@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+
+    background: linear-gradient(135deg, #131523, #081b21c7);
+    background: linear-gradient(135deg, #131523, #081b21c7);
+    background-size: 200% 200%;
+    animation: animateGradient 80s ease-in-out infinite;
+  }
+
+  @keyframes animateGradient {
+    0% {
+      background-position: 0% 0%;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+
+
+
+  nav {
+    position: sticky;
+    top: 0;
+    background-color: #33333331;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    z-index: 1000;
+    color: #3b97699c;
+  }
+
+  nav button {
+    color: rgb(255, 255, 255);
+    background-color: #3369ff3b;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 15px;
+
+  }
+
+  nav button:hover {
+    background-color: #001b75;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    color: #00bcd4;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+  }
+
+  .center {
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    margin: 1rem auto;
+  }
+
+  section {
+    border: 2px solid #999;
+    border-radius: 12px;
+    margin: 2rem 0;
+    padding: 1rem;
+    /* background-color: #fff; */
+    color: white;
+    margin-top: 60px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+
+    background: rgba(45, 79, 77, 0.155);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+
+  #about {
+    height: auto;
+  }
+
+  section:hover {
+    border: 2px solid #dcafcf86;
+    box-shadow: 0 0 10px #7c9e7c;
+    outline: none;
+
+    background: rgba(80, 17, 229, 0.11);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 20px;
+
+
+
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+    margin-top: 230px;
+    font-size: 3rem;
+    background: linear-gradient(to right, #ca6500, #ffffff, #0a7500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+
+
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      flex-wrap: wrap;
+      gap: 1.1rem;
+    }
+
+    .profile-pic {
+      width: 220px;
+      height: 220px;
+      border: 2px solid wheat;
+
+    }
+
+
+
+    h1 {
+      font-size: 2rem;
+
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    background: linear-gradient(to right, rgb(100, 75, 30), rgb(234, 223, 223), rgb(9, 105, 9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .center p {
+    background: linear-gradient(to right, rgb(100, 75, 30), rgb(234, 223, 223), rgb(9, 105, 9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.3rem;
+
+  }
+
+  @media only screen and (max-width:893px) {
+    section {
+      font-size: 1rem;
+    }
+  }
+
+  #link {
+    color: rgb(163, 163, 12);
+    text-decoration: none;
+  }
+
+  @media only screen and (max-width:450px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    .center p {
+      font-size: 1.1rem;
+    }
+
+    .intro {
+      font-size: 2rem;
+    }
+
+    section {
+      font-size: 0.9rem;
+    }
+
+    #home {
+      margin-top: 50px;
+    }
+
+    nav button {
+      padding: 6px;
+      font-size: 0.9rem;
+
+    }
+  }
