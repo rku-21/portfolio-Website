@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# OS generated files
+*.swp
+*.swo
+
+# Images and uploads (optional, uncomment if needed)
+# uploads/
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+
+# Misc
+*.bak
+*.tmp

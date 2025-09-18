@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Kumar Upadhyay - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">RKU</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="IMG_20230830_103258.jpg" alt="Rahul Kumar Upadhyay" class="profile-image">
+            <h2>Rahul Kumar Upadhyay</h2>
+            <p class="subtitle">Aspiring Full-Stack Web Developer</p>
+            
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-code"></i>
+                    View Projects
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+
+            
+             <div class="education-card fade-in">
+                    <h4>Education</h4>
+                 <h2 class="institution">National Institute of Technology Nagaland</h2>
+                    <div class="details">
+                        <p><strong>Degree:</strong> B.Tech in Electronics & Communication Engineering</p>
+                        <p><strong>Duration:</strong> 2023 - 2027</p>
+                        <p><strong>Current Semester:</strong> 5th</p>
+                        <p><strong>CGPA:</strong> 9.0</p>
+                    </div>
+                </div>
+            
+        
+    </section>
+
+
+
+    
+
+    
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            
+
+            <div class="coding-stats fade-in">
+                <div class="stat-card">
+                    <i class="fas fa-code"></i>
+                    <div class="number" id="stat1">0+</div>
+                    <div class="label">LeetCode Problems Solved</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <div class="number" id="stat2">0+</div>
+                    <div class="label">GeeksforGeeks Problems</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-trophy"></i>
+                    <div class="number" id="stat3">0</div>
+                    <div class="label">Current CGPA</div>
+                </div>
+            </div>
+
+            <div id="stats-section" class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-palette"></i> Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Authentication</span>
+                        <span class="skill-tag">Mongoose</span>
+                        <span class="skill-tag">Socket.io</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-brain"></i> Languages & DSA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Arrays</span>
+                        <span class="skill-tag">Trees</span>
+                        <span class="skill-tag">Graphs</span>
+                        <span class="skill-tag">Dynamic Programming</span>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">NPM</span>
+                        <span class="skill-tag">Cloud Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-comments">
+
+                        </i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Privex - Full-Stack Chat Application</h3>
+                        <p>
+                            A comprehensive real-time chat application featuring user authentication, friend requests, 
+                            and instant messaging. Built with React.js, Node.js, and Socket.io, deployed on Render.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://privex-1.onrender.com" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/rku-21" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Netflix Clone</h3>
+                        <p>
+                            A responsive Netflix clone built with HTML and CSS, showcasing modern web design principles 
+                            and responsive layout techniques. Features a pixel-perfect recreation of the Netflix interface.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/rku-21" target="_blank">
+                                <i class="fab fa-github"></i>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Video Generator <span style="color: #667eea;">(In Progress)</span></h3>
+                        <p>
+                            An innovative project that automates video creation using AI-generated voiceovers and scenes. 
+                            Leveraging cutting-edge AI technologies to streamline content creation processes.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" style="opacity: 0.6; cursor: not-allowed;">
+                                <i class="fas fa-clock"></i>
+                                Coming Soon
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <h2 class="section-title fade-in">Achievements & Activities</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-baseball-ball"></i>
+                    </div>
+                    <h3>Inter-NIT Cricket Representative</h3>
+                    <p>Represented NIT Nagaland in Inter-NIT Cricket Tournaments, demonstrating exceptional teamwork, discipline, and leadership skills on a national platform.</p>
+                </div>
+                
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Competitive Programming</h3>
+                    <p>Active participant in college-level coding contests and hackathons, consistently enhancing problem-solving abilities and collaborative development skills.</p>
+                </div>
+                
+                <div class="achievement-card fade-in">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Technical Community Member</h3>
+                    <p>Active member of technical clubs and workshops, contributing to project discussions, peer learning, and knowledge sharing within the developer community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section timeline-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Journey Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>2027 (Expected)</h3>
+                        <h4>B.Tech Graduation</h4>
+                        <p>Expected graduation from NIT Nagaland with specialization in Electronics & Communication Engineering</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>2024-2025</h3>
+                        <h4>Full-Stack Development Mastery</h4>
+                        <p>Built comprehensive projects including Privex chat application, mastered React.js, Node.js, and modern web technologies</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>2023-2024</h3>
+                        <h4>Programming Foundation</h4>
+                        <p>Started journey in competitive programming, solved 150+ LeetCode problems, built strong DSA foundation</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <h4>NIT Nagaland Admission</h4>
+                        <p>Started B.Tech in Electronics & Communication Engineering, maintaining 9.0 CGPA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title fade-in">Let's Connect</h2>
+                <p class="fade-in" style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    I'm always open to discussing new opportunities, collaborations, or just having a chat about technology!
+                </p>
+                
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:rahul.k.upadhyay21@gmail.com">rahul.k.upadhyay21@gmail.com</a>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+916201904909">+91 6201904909</a>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/rku21" target="_blank">linkedin.com/in/rku21</a>
+                    </div>
+                    <div class="contact-item fade-in">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/rku-21" target="_blank">github.com/rku-21</a>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="contact-form-container fade-in">
+                    <h3 style="color: white; margin-bottom: 2rem; text-align: center;">Send a Quick Message</h3>
+    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+    <input type="hidden" name="access_key" value="412d2e5d-5217-49ad-a928-5fb4560f12cc">
+
+  
+
+    <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+    <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary-footer" style="width: 100%;">
+        <i class="fas fa-paper-plane"></i>
+        Send Message
+    </button>
+</form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+               
+                <div class="footer-links">
+                    <a href="https://github.com/rku-21" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/rku21" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:rahul.k.upadhyay21@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll progress indicator
+        function updateScrollProgress() {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrollPercent + '%';
+        }
+
+        window.addEventListener('scroll', updateScrollProgress);
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+
+        // Add some interactive elements
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add typing effect to hero subtitle
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const subject = `Portfolio Contact from ${name}`;
+            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            const mailtoLink = `mailto:rahul.k.upadhyay21@gmail.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            const button = this.querySelector('button');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            button.style.background = '#28a745';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.background = '';
+            }, 3000);
+        });
+
+        // Add particle effect to hero section
+        function createParticles() {
+            const hero = document.querySelector('.hero');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.style.position = 'absolute';
+                particle.style.width = Math.random() * 4 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.background = 'rgba(255, 255, 255, 0.3)';
+                particle.style.borderRadius = '50%';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animation = `float ${Math.random() * 10 + 10}s infinite linear`;
+                particle.style.pointerEvents = 'none';
+                hero.appendChild(particle);
+            }
+        }
+
+        // Add floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize particles when page loads
+        window.addEventListener('load', function() {
+            createParticles();
+            
+            const subtitle = document.querySelector('.hero .subtitle');
+            const originalText = subtitle.textContent;
+            setTimeout(() => {
+                typeWriter(subtitle, originalText, 80);
+            }, 1000);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
