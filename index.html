@@ -16,7 +16,7 @@
     
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">RKU</div>
+            <div class="logo">Rahul Kumar Upadhyay</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -191,7 +191,7 @@
                             and responsive layout techniques. Features a pixel-perfect recreation of the Netflix interface.
                         </p>
                         <div class="project-links">
-                            <a href="#" target="_blank">
+                            <a href="https://dulcet-maamoul-c82e21.netlify.app/" target="_blank">
                                 <i class="fas fa-external-link-alt"></i>
                                 Live Demo
                             </a>
@@ -334,10 +334,7 @@
                 <div class="contact-form-container fade-in">
                     <h3 style="color: white; margin-bottom: 2rem; text-align: center;">Send a Quick Message</h3>
     <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-
     <input type="hidden" name="access_key" value="412d2e5d-5217-49ad-a928-5fb4560f12cc">
-
-  
 
     <div class="form-group">
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -454,36 +451,42 @@
             type();
         }
 
-        // Handle contact form submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link
-            const subject = `Portfolio Contact from ${name}`;
-            const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-            const mailtoLink = `mailto:rahul.k.upadhyay21@gmail.com?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Reset form
-            this.reset();
-            
-            // Show success message
             const button = this.querySelector('button');
             const originalText = button.innerHTML;
-            button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            button.style.background = '#28a745';
             
-            setTimeout(() => {
-                button.innerHTML = originalText;
-                button.style.background = '';
-            }, 3000);
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            button.disabled = true;
+            
+            const formData = new FormData(this);
+            
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(res => {
+                button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                button.style.background = '#28a745';
+                this.reset();
+                
+                setTimeout(() => {
+                    button.disabled = false;
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 3000);
+            })
+            .catch(err => {
+                button.innerHTML = '<i class="fas fa-times"></i> Error!';
+                button.style.background = '#dc3545';
+                
+                setTimeout(() => {
+                    button.disabled = false;
+                    button.innerHTML = originalText;
+                    button.style.background = '';
+                }, 3000);
+            });
         });
 
         // Add particle effect to hero section
