@@ -36,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
       if (entry.isIntersecting) {
         if (!animating) {
           animating = true;
-          animateCount('stat1', 150);
-          animateCount('stat2', 80);
-          animateCount('stat3', 9.0);
+          animateCount('stat1', 300);
+          animateCount('stat2', 120);
+          animateCount('stat3', 8.95);
         }
       } else {
         // Reset numbers to 0 when out of view
