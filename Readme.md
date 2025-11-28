@@ -21,8 +21,8 @@ This is my personal **portfolio website** built using HTML, CSS, and JavaScript 
 [Visit my portfolio](https://rku-21.github.io/portfolio-Website/)  
 
 ## 📬 Contact
-- Email: rishikeshkumar112017@gmail.com  
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourusername)  
+- Email: upadhyayrahul21642@gmail.com  
+- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/rku21)  
 - GitHub: [rku-21](https://github.com/rku-21)  
 
 ---
