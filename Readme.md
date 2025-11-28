@@ -22,7 +22,7 @@ This is my personal **portfolio website** built using HTML, CSS, and JavaScript 
 
 ## 📬 Contact
 - Email: upadhyayrahul21642@gmail.com  
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/rku21)  
+- LinkedIn: [rku21](https://linkedin.com/in/rku21)  
 - GitHub: [rku-21](https://github.com/rku-21)  
 
 ---
