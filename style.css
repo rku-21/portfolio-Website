@@ -117,12 +117,24 @@ body {
 }
 
 .content-section {
-    display: none;
+    display: block;
     animation: reveal 0.35s ease;
+    margin-bottom: 2.2rem;
 }
 
 .content-section.active-section {
     display: block;
+}
+
+@media (min-width: 901px) {
+    .content-section {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .content-section.active-section {
+        display: block;
+    }
 }
 
 .section-title {
@@ -411,6 +423,102 @@ body {
     font-size: 0.87rem;
 }
 
+#journey .timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#journey .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #3a3a3a, #1e1e1e);
+    transform: translateX(-50%);
+}
+
+#journey .timeline .timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+    position: relative;
+}
+
+#journey .timeline .timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+#journey .timeline-marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    box-shadow: 0 0 0 3px #0b0b0b, 0 0 0 5px #2e2e2e;
+}
+
+#journey .timeline-content {
+    width: 45%;
+    border: 1px solid var(--line);
+    background: #0b0b0b;
+    padding: 1rem;
+    position: relative;
+}
+
+#journey .timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    margin-left: 6%;
+}
+
+#journey .timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 6%;
+}
+
+#journey .timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    transform: translateY(-50%);
+}
+
+#journey .timeline-item:nth-child(odd) .timeline-content::before {
+    right: -16px;
+    border-left-color: #252525;
+}
+
+#journey .timeline-item:nth-child(even) .timeline-content::before {
+    left: -16px;
+    border-right-color: #252525;
+}
+
+#journey .timeline-content h3 {
+    color: var(--accent);
+    font-size: 0.86rem;
+    font-family: "JetBrains Mono", monospace;
+    margin-bottom: 0.4rem;
+}
+
+#journey .timeline-content h4 {
+    color: #e5e5e5;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+}
+
+#journey .timeline-content p {
+    color: #a8a8a8;
+    font-size: 0.88rem;
+}
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -545,6 +653,26 @@ body {
 }
 
 @media (max-width: 900px) {
+    .tab-nav {
+        display: none;
+    }
+
+    .header-top {
+        flex-direction: column;
+    }
+
+    .header-meta {
+        text-align: left;
+    }
+
+    .project-head {
+        flex-direction: column;
+    }
+
+    .project-meta {
+        text-align: left;
+    }
+
     .stats-grid {
         grid-template-columns: 1fr;
     }
@@ -564,17 +692,37 @@ body {
     .meta-grid {
         grid-template-columns: 1fr;
     }
+
+    #journey .timeline::before {
+        left: 18px;
+        transform: none;
+    }
+
+    #journey .timeline .timeline-item,
+    #journey .timeline .timeline-item:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    #journey .timeline-marker {
+        left: 18px;
+        transform: none;
+    }
+
+    #journey .timeline-content {
+        width: calc(100% - 44px);
+        margin-left: 44px !important;
+        margin-right: 0 !important;
+    }
+
+    #journey .timeline-content::before {
+        left: -16px !important;
+        right: auto !important;
+        border-right-color: #252525 !important;
+        border-left-color: transparent !important;
+    }
 }
 
 @media (max-width: 640px) {
-    .header-top {
-        flex-direction: column;
-    }
-
-    .header-meta {
-        text-align: left;
-    }
-
     .site-footer .container {
         flex-direction: column;
         align-items: flex-start;
@@ -589,11 +737,4 @@ body {
         padding: 0.45rem 0.65rem;
     }
 
-    .project-head {
-        flex-direction: column;
-    }
-
-    .project-meta {
-        text-align: left;
-    }
 }

@@ -1,23 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tabButtons = document.querySelectorAll(".tab-btn");
     const sections = document.querySelectorAll(".content-section");
+    const desktopQuery = window.matchMedia("(min-width: 901px)");
+    let activeSectionId = document.querySelector(".content-section.active-section")?.id || sections[0]?.id;
 
-    function activateSection(sectionId) {
+    function applyDesktopTabs() {
         sections.forEach((section) => {
-            section.classList.toggle("active-section", section.id === sectionId);
+            section.classList.toggle("active-section", section.id === activeSectionId);
         });
 
         tabButtons.forEach((button) => {
-            button.classList.toggle("active", button.dataset.section === sectionId);
+            button.classList.toggle("active", button.dataset.section === activeSectionId);
+        });
+    }
+
+    function applyLayoutMode() {
+        if (desktopQuery.matches) {
+            applyDesktopTabs();
+            return;
+        }
+
+        sections.forEach((section) => section.classList.add("active-section"));
+        tabButtons.forEach((button) => {
+            button.classList.toggle("active", button.dataset.section === activeSectionId);
         });
     }
 
     tabButtons.forEach((button) => {
         button.addEventListener("click", () => {
-            activateSection(button.dataset.section);
+            if (!desktopQuery.matches) return;
+            activeSectionId = button.dataset.section;
+            applyDesktopTabs();
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
     });
+
+    if (typeof desktopQuery.addEventListener === "function") {
+        desktopQuery.addEventListener("change", applyLayoutMode);
+    } else if (typeof desktopQuery.addListener === "function") {
+        desktopQuery.addListener(applyLayoutMode);
+    }
+
+    window.addEventListener("resize", applyLayoutMode);
+    applyLayoutMode();
 
     const projectHeads = document.querySelectorAll(".project-head");
     projectHeads.forEach((head) => {
@@ -26,16 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!card) return;
 
             const isOpen = card.classList.contains("open");
-            projectHeads.forEach((item) => {
-                const container = item.closest(".project-card");
-                if (container) container.classList.remove("open");
-                item.setAttribute("aria-expanded", "false");
-            });
-
-            if (!isOpen) {
-                card.classList.add("open");
-                head.setAttribute("aria-expanded", "true");
-            }
+            card.classList.toggle("open", !isOpen);
+            head.setAttribute("aria-expanded", String(!isOpen));
         });
     });
 
